@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>hola</title>
+</head>
+<body>
+<h1> </h1>
+<script src="prueba.js"></script>
+
+<input type="text" id="nombre">
+<p>
+	
+</p>
+<input type="button" value="añadir" onclick="añadir();">
+<p>
+	
+</p>
+<div id="eli">
+	<h1>Hola Mundo</h1>
+	<a href="google.com">Google</a>
+	<input type="button" value="Eliminar" onclick="Quitar()">
+</div>
+<div id="lista">
+	
+</div>
+
+<script>
+	function añadir() {
+		console.log("añadir");
+		var nuevo=document.createElement("div");
+		nuevo.innerHTML=document.getElementById("nombre").value;
+		nuevo.onclick=Quitar;
+		document.getElementById("lista").appendChild(nuevo);
+	}
+
+	function Quitar() {
+		
+		document.getElementById("eli").remove(this);
+	}
+
+</script>
+
+
+</body>
+</html>
